@@ -32,12 +32,14 @@ import html from '/public/svg/skills/html.svg';
 import illustrator from '/public/svg/skills/illustrator.svg';
 import ionic from '/public/svg/skills/ionic.svg';
 import java from '/public/svg/skills/java.svg';
+import springBoot from '/public/svg/skills/springBoot.svg';
 import javascript from '/public/svg/skills/javascript.svg';
 import julia from '/public/svg/skills/julia.svg';
 import kotlin from '/public/svg/skills/kotlin.svg';
 import lightroom from '/public/svg/skills/lightroom.svg';
 import markdown from '/public/svg/skills/markdown.svg';
 import materialui from '/public/svg/skills/materialui.svg';
+import reactNative from '/public/svg/skills/reactNative.svg';
 import matlab from '/public/svg/skills/matlab.svg';
 import memsql from '/public/svg/skills/memsql.svg';
 import microsoftoffice from '/public/svg/skills/microsoftoffice.svg';
@@ -93,6 +95,8 @@ export const skillsImage = (skill) => {
       return afterEffects;
     case 'css':
       return css;
+    case 'spring boot':
+      return springBoot;
     case 'angular':
       return angular;
     case 'javascript':
@@ -103,6 +107,8 @@ export const skillsImage = (skill) => {
       return nuxtJS;
     case 'react':
       return react;
+    case 'react native':
+      return reactNative;
     case 'svelte':
       return svelte;
     case 'typescript':
