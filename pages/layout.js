@@ -1,3 +1,4 @@
+'use client'
 import { GoogleTagManager } from "@next/third-parties/google";
 import { Inter } from "next/font/google";
 import { ToastContainer } from "react-toastify";
@@ -9,7 +10,7 @@ import "./css/globals.scss";
 import ScrollToTop from "./components/helper/scroll-to-top";
 const inter = Inter({ subsets: ["latin"] });
 
-export const metadata = {
+const metadata = {
   title: "Portfolio of MOHAMMAD ALI - Software Developer",
   description:
     "This is the portfolio of MOHAMMAD ALI. I am a full stack developer and a self taught developer. I love to learn new things and I am always open to collaborating with others. I am a quick learner and I am always looking for new challenges.",
@@ -17,6 +18,9 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
   return (
+
+
+    
     <html lang="en">
       <body className={inter.className}>
         <ToastContainer />
