@@ -1,6 +1,7 @@
 "use client"
 
 import { useState, useEffect } from "react"
+import { createPortal } from "react-dom"
 import Link from "next/link"
 import Image from "next/image"
 import { cn } from "@/lib/utils"
@@ -18,14 +19,45 @@ export function Header() {
   const [isScrolled, setIsScrolled] = useState(false)
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false)
   const [isProfileModalOpen, setIsProfileModalOpen] = useState(false)
+  const [mounted, setMounted] = useState(false)
+
+  useEffect(() => {
+    setMounted(true)
+  }, [])
 
   useEffect(() => {
     const handleScroll = () => {
       setIsScrolled(window.scrollY > 50)
+      // Close profile modal when user scrolls
+      if (isProfileModalOpen) {
+        setIsProfileModalOpen(false)
+      }
     }
     window.addEventListener("scroll", handleScroll)
     return () => window.removeEventListener("scroll", handleScroll)
-  }, [])
+  }, [isProfileModalOpen])
+
+  // Close modal on Escape key press
+  useEffect(() => {
+    const handleKeyDown = (event: KeyboardEvent) => {
+      if (event.key === "Escape" && isProfileModalOpen) {
+        setIsProfileModalOpen(false)
+      }
+    }
+    
+    if (isProfileModalOpen) {
+      document.addEventListener("keydown", handleKeyDown)
+      // Prevent body scroll when modal is open
+      document.body.style.overflow = "hidden"
+    } else {
+      document.body.style.overflow = "unset"
+    }
+    
+    return () => {
+      document.removeEventListener("keydown", handleKeyDown)
+      document.body.style.overflow = "unset"
+    }
+  }, [isProfileModalOpen])
 
   return (
     <header
@@ -122,32 +154,48 @@ export function Header() {
         </ul>
       </div>
 
-      {/* Profile Picture Modal */}
-      {isProfileModalOpen && (
+      {/* Profile Picture Modal - Using Portal to render at body level */}
+      {mounted && isProfileModalOpen && createPortal(
         <div
-          className="fixed inset-0 z-[100] flex items-center justify-center bg-black/80 backdrop-blur-sm"
+          className="fixed inset-0 z-[99999] flex items-center justify-center bg-black/80 backdrop-blur-sm animate-in fade-in-0 duration-200"
           onClick={() => setIsProfileModalOpen(false)}
+          style={{ 
+            position: 'fixed', 
+            top: 0, 
+            left: 0, 
+            right: 0, 
+            bottom: 0, 
+            display: 'flex', 
+            alignItems: 'center', 
+            justifyContent: 'center',
+            zIndex: 99999
+          }}
         >
-          <div className="relative max-w-lg max-h-[80vh] p-4">
+          <div 
+            className="relative max-w-lg max-h-[80vh] p-4 animate-in zoom-in-95 duration-200"
+            onClick={(e) => e.stopPropagation()}
+          >
             <button
               onClick={() => setIsProfileModalOpen(false)}
-              className="absolute -top-2 -right-2 z-10 w-8 h-8 rounded-full bg-background border border-border flex items-center justify-center text-muted-foreground hover:text-foreground transition-colors"
+              className="absolute -top-2 -right-2 z-10 w-8 h-8 rounded-full bg-background border border-border flex items-center justify-center text-muted-foreground hover:text-foreground transition-colors shadow-lg"
               aria-label="Close profile picture"
             >
               <X className="w-4 h-4" />
             </button>
-            <div className="relative rounded-lg overflow-hidden shadow-2xl">
+            <div className="relative rounded-lg overflow-hidden shadow-2xl border border-border/20">
               <Image
                 src="/profile/profile.png"
                 alt="Mohammad Ali - Full Profile Picture"
-                width={400}
-                height={400}
-                className="object-cover w-full h-auto"
+                width={500}
+                height={500}
+                className="object-cover w-full h-auto max-w-full"
                 priority
+                quality={95}
               />
             </div>
           </div>
-        </div>
+        </div>,
+        document.body
       )}
     </header>
   )
