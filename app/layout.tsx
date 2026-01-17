@@ -46,7 +46,7 @@ export const metadata: Metadata = {
     siteName: "Mohammad Ali Portfolio",
     images: [
       {
-        url: "/og-image.jpg",
+        url: "/my-favicon/favicon.png",
         width: 1200,
         height: 630,
         alt: "Mohammad Ali - Software Engineer",
@@ -57,7 +57,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "Mohammad Ali | Software Engineer - AI & Backend Systems",
     description: "Software Engineer specializing in AI/ML, Backend Development, and Cloud Architecture.",
-    images: ["/og-image.jpg"],
+    images: ["/my-favicon/favicon.png"],
   },
   robots: {
     index: true,
@@ -73,20 +73,12 @@ export const metadata: Metadata = {
   generator: "mohammad-ali-portfolio.app",
   icons: {
     icon: [
-      {
-        url: "/icon-light-32x32.png",
-        media: "(prefers-color-scheme: light)",
-      },
-      {
-        url: "/icon-dark-32x32.png",
-        media: "(prefers-color-scheme: dark)",
-      },
-      {
-        url: "/icon.svg",
-        type: "image/svg+xml",
-      },
+      { url: "/my-favicon/favicon-32x32.png", sizes: "32x32", type: "image/png" },
+      { url: "/my-favicon/favicon-16x16.png", sizes: "16x16", type: "image/png" },
+      { url: "/my-favicon/favicon.ico", sizes: "any" }
     ],
-    apple: "/apple-icon.png",
+    shortcut: "/my-favicon/favicon.ico",
+    apple: "/my-favicon/apple-touch-icon.png",
   },
 }
 
