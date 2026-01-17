@@ -33,7 +33,7 @@ export function Education() {
             <p className="text-primary text-sm">FAST National University of Computer & Emerging Sciences, Karachi</p>
             <p className="text-muted-foreground text-sm mt-1">September 2021 — June 2025</p>
             <p className="text-muted-foreground text-sm mt-2">
-              CGPA: <span className="text-foreground font-medium">3.27/4.0</span>
+              CGPA: <span className="text-foreground font-medium">3.29/4.0</span>
             </p>
             <p className="text-muted-foreground text-xs mt-2">
               Relevant Coursework: Data Structures, Algorithms, Database Systems, Machine Learning, Software
