@@ -70,7 +70,7 @@ export const metadata: Metadata = {
       "max-snippet": -1,
     },
   },
-  generator: "v0.app",
+  generator: "mohammad-ali-portfolio.app",
   icons: {
     icon: [
       {
