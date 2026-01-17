@@ -36,8 +36,8 @@ export function Education() {
               CGPA: <span className="text-foreground font-medium">3.29/4.0</span>
             </p>
             <p className="text-muted-foreground text-xs mt-2">
-              Relevant Coursework: Data Structures, Algorithms, Database Systems, Machine Learning, Software
-              Engineering, Distributed Systems
+              Relevant Coursework: OOP, Data Structures & Algorithms, Database Systems, Operating Systems, Software
+              Engineering, Distributed Systems, Information Security, Artificial Intelligence, Machine Learning, Natural Language Processing, DevOps, Cloud Computing, Agile Project Mangement
             </p>
           </div>
         </div>

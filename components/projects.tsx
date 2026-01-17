@@ -13,7 +13,7 @@ const featuredProjects = [
     subtitle: "AI-Powered Legal Assistant",
     category: "AI/ML",
     description:
-      "Production-grade AI chatbot providing legal assistance and automated document drafting based on Pakistani law. Implements RAG architecture with Llama 3.1 and Legal BERT for accurate legal guidance, streamlined documentation, and enhanced accessibility.",
+      "Production-grade AI chatbot providing legal assistance and automated document drafting based on Pakistani law. Implements RAG architecture with Llama 3.1 and Legal BERT for accurate legal guidance, streamlined documentation, and enhanced accessibility. App is available on Google Play Store.",
     role: "Backend Developer & AI Specialist",
     tech: ["Python", "React Native", "Spring Boot", "PostgreSQL", "Llama 3.1", "Legal BERT", "RAG Pipeline", "AWS"],
     github: "https://github.com/mohammadali83123/LawMadad",
@@ -25,8 +25,8 @@ const featuredProjects = [
     subtitle: "Enterprise Production AI System",
     category: "AI/ML",
     description:
-      "Architected and deployed intelligent customer care automation system achieving 92%+ query automation rate. Features include real-time order tracking, automated cancellations, delivery status APIs, NLP-powered product search, and multilingual voice query support (English/Urdu).",
-    role: "Lead Developer",
+      "Architected and deployed intelligent customer care automation system for Bazaar Technologies  achieving 92%+ query automation rate. Features include real-time order tracking, order edit requests, NLP-powered product search, complete complaint management system and multilingual voice query support (English/Urdu).",
+    role: "AI/ML Developer",
     tech: ["Python", "FastAPI", "MessagingBird", "n8n", "PostgreSQL", "NLP", "Microservices"],
     github: null,
     external: null,
@@ -172,8 +172,8 @@ export function Projects() {
               AI/ML Pipeline Architecture
             </h4>
             <p className="text-muted-foreground leading-relaxed">
-              RAG architecture with vector databases (Pinecone, Chroma), LLM integration (Llama 3.1, GPT-4, Claude),
-              fine-tuning pipelines, and conversational AI with context retention.
+              RAG architecture with vector databases (Pinecone, Chroma), LLM integration (Ollama,Llama 3.1, GPT-4, Claude),
+              fine-tuning pipelines, n8n automation workflows, conversational AI with context retention and Data Transformation (ETL) using DuckDB.
             </p>
           </div>
           <div className="group">

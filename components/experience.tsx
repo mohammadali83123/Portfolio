@@ -12,8 +12,8 @@ const experiences = [
     companyUrl: "https://www.bazaartech.com/",
     period: "May 2025 — Present",
     description: [
-      "Architected and deployed production-grade Customer Care Bot on MessagingBird CRM, achieving 70%+ automation rate for customer queries, reducing manual agent workload by 60%",
-      "Engineered end-to-end features including real-time order tracking, automated cancellation workflows, delivery status APIs, intelligent product search, and Urdu voice query processing using NLP",
+      "Architected and deployed production-grade Customer Care Bot, achieving 92%+ automation rate for customer queries, reducing manual agent workload by 60%",
+      "Engineered end-to-end features including real-time order tracking, automated cancellation workflows, delivery status APIs, intelligent product search, and Urdu voice query processing",
       "Designed and implemented n8n automation workflows for order confirmation processes, reducing operational overhead by 40% and improving order accuracy",
       "Developed RESTful microservices using FastAPI and Python, optimized PostgreSQL queries achieving 30% performance improvement for data analytics pipelines",
       "Collaborated cross-functionally with Engineering, Product, and Customer Experience teams; work directly visible to Co-founder and executive leadership",
@@ -30,7 +30,7 @@ const experiences = [
       "Architected and maintained scalable ETL data pipelines, reducing model training time by 25% through optimized data handling and preprocessing",
       "Collaborated with cross-functional team of 4+ engineers to integrate AI/ML features into production systems, enhancing project delivery efficiency by 20%",
     ],
-    skills: ["Azure", "Microsoft Fabric", "Python", "Machine Learning", "ETL", "Data Pipelines"],
+    skills: ["Azure", "Microsoft Fabric", "Python", "Machine Learning", "ETL", "DuckDB", "Data Pipelines"],
   },
   {
     title: "Software Engineer Intern",

@@ -103,7 +103,7 @@ export function Hero() {
           <p>
             I&apos;m a <span className="text-foreground font-medium">Software Engineer at Bazaar Technologies</span>,
             where I lead development of backend systems, conversational AI solutions, and workflow automation. My
-            production systems have achieved <span className="text-primary">70%+ query automation rates</span>,
+            production systems have achieved <span className="text-primary">92%+ query automation rates</span>,
             significantly reducing operational costs and improving customer satisfaction.
           </p>
           <p>
