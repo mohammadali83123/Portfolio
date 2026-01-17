@@ -48,7 +48,7 @@ export function Header() {
           ))}
           <li>
             <Link
-              href="/resume.pdf"
+              href="https://drive.google.com/file/d/1Azd-6TJSUGc3A9NHCwgchrhcq-QCgDBp/view?usp=sharing"
               className="text-sm px-4 py-2 border border-primary text-primary rounded hover:bg-primary/10 transition-colors"
             >
               Resume
@@ -93,7 +93,7 @@ export function Header() {
           ))}
           <li>
             <Link
-              href="/resume.pdf"
+              href="https://drive.google.com/file/d/1Azd-6TJSUGc3A9NHCwgchrhcq-QCgDBp/view?usp=sharing"
               className="inline-block px-4 py-2 border border-primary text-primary rounded hover:bg-primary/10 transition-colors"
             >
               Resume

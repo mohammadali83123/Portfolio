@@ -16,8 +16,8 @@ const featuredProjects = [
       "Production-grade AI chatbot providing legal assistance and automated document drafting based on Pakistani law. Implements RAG architecture with Llama 3.1 and Legal BERT for accurate legal guidance, streamlined documentation, and enhanced accessibility.",
     role: "Backend Developer & AI Specialist",
     tech: ["Python", "React Native", "Spring Boot", "PostgreSQL", "Llama 3.1", "Legal BERT", "RAG Pipeline", "AWS"],
-    github: "#",
-    external: "#",
+    github: "https://github.com/mohammadali83123/LawMadad",
+    external: "https://play.google.com/store/apps/details?id=com.mohammadali83123.LawMadad",
     image: "/ai-legal-chatbot-interface-with-document-drafting.jpg",
   },
   {
@@ -25,7 +25,7 @@ const featuredProjects = [
     subtitle: "Enterprise Production AI System",
     category: "AI/ML",
     description:
-      "Architected and deployed intelligent customer care automation system achieving 70%+ query automation rate. Features include real-time order tracking, automated cancellations, delivery status APIs, NLP-powered product search, and multilingual voice query support (English/Urdu).",
+      "Architected and deployed intelligent customer care automation system achieving 92%+ query automation rate. Features include real-time order tracking, automated cancellations, delivery status APIs, NLP-powered product search, and multilingual voice query support (English/Urdu).",
     role: "Lead Developer",
     tech: ["Python", "FastAPI", "MessagingBird", "n8n", "PostgreSQL", "NLP", "Microservices"],
     github: null,
@@ -40,8 +40,8 @@ const featuredProjects = [
       "Full-stack code collaboration platform rewarding open-source contributions via blockchain smart contracts. Features include contribution tracking analytics, Solidity-based reward distribution, and community engagement tools.",
     role: "Full Stack Developer",
     tech: ["React", "Node.js", "Express.js", "MySQL", "Solidity", "Blockchain", "Web3"],
-    github: "#",
-    external: "#",
+    github: "https://github.com/mohammadali83123/CODETRIBUTE",
+    external: null,
     image: "/code-collaboration-platform-with-blockchain-reward.jpg",
   },
 ]

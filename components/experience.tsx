@@ -9,7 +9,7 @@ const experiences = [
   {
     title: "Software Engineer I",
     company: "Bazaar Technologies",
-    companyUrl: "https://bazaar.com",
+    companyUrl: "https://www.bazaartech.com/",
     period: "May 2025 — Present",
     description: [
       "Architected and deployed production-grade Customer Care Bot on MessagingBird CRM, achieving 70%+ automation rate for customer queries, reducing manual agent workload by 60%",
@@ -23,7 +23,7 @@ const experiences = [
   {
     title: "AI/ML Engineer Intern",
     company: "Imperium Dynamics",
-    companyUrl: "#",
+    companyUrl: "https://imperiumdynamics.com/",
     period: "April 2025 — May 2025",
     description: [
       "Developed and deployed machine learning models on Microsoft Azure and Microsoft Fabric, improving data processing efficiency by 30%",
@@ -35,7 +35,7 @@ const experiences = [
   {
     title: "Software Engineer Intern",
     company: "SOCByte",
-    companyUrl: "#",
+    companyUrl: "https://socbyte.ai/",
     period: "March 2025 — April 2025",
     description: [
       "Enhanced system security by 10% through implementing authentication protocols, encryption standards, and security best practices using Fastify and Next.js",
