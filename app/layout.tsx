@@ -47,7 +47,7 @@ export const metadata: Metadata = {
     siteName: "Mohammad Ali",
     images: [
       {
-        url: "/my-favicon/favicon.png",
+        url: "https://mohammadalis.vercel.app/profile/profile.png",
         width: 1200,
         height: 630,
         alt: "Mohammad Ali - Software Engineer",
@@ -58,7 +58,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "Mohammad Ali | Software Engineer - AI & Backend Systems",
     description: "Software Engineer specializing in AI/ML, Backend Development, and Cloud Architecture.",
-    images: ["/my-favicon/favicon.png"],
+    images: ["https://mohammadalis.vercel.app/profile/profile.png"],
   },
   robots: {
     index: true,
