@@ -34,16 +34,16 @@ export const metadata: Metadata = {
     "Next.js",
     "Node.js",
   ],
-  authors: [{ name: "Mohammad Ali", url: "https://mohammadali.dev" }],
+  authors: [{ name: "Mohammad Ali", url: "https://mohammadalis.vercel.app" }],
   creator: "Mohammad Ali",
   openGraph: {
     type: "website",
     locale: "en_US",
-    url: "https://mohammadali.dev",
+    url: "https://mohammadalis.vercel.app",
     title: "Mohammad Ali | Software Engineer - AI & Backend Systems",
     description:
       "Software Engineer with expertise in AI/ML, Backend Development, and Cloud Architecture. Building scalable production systems.",
-    siteName: "Mohammad Ali Portfolio",
+    siteName: "Mohammad Ali",
     images: [
       {
         url: "/my-favicon/favicon.png",
