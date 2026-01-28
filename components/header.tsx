@@ -100,7 +100,7 @@ export function Header() {
           ))}
           <li>
             <Link
-              href="https://drive.google.com/file/d/1Azd-6TJSUGc3A9NHCwgchrhcq-QCgDBp/view?usp=sharing"
+              href="https://drive.google.com/file/d/1xFBJkDVEBfhSzSQ0NKPy59IMm2VttJEa/view?usp=sharing"
               className="text-sm px-4 py-2 border border-primary text-primary rounded hover:bg-primary/10 transition-colors"
             >
               Resume
@@ -145,7 +145,7 @@ export function Header() {
           ))}
           <li>
             <Link
-              href="https://drive.google.com/file/d/1Azd-6TJSUGc3A9NHCwgchrhcq-QCgDBp/view?usp=sharing"
+              href="https://drive.google.com/file/d/1xFBJkDVEBfhSzSQ0NKPy59IMm2VttJEa/view?usp=sharing"
               className="inline-block px-4 py-2 border border-primary text-primary rounded hover:bg-primary/10 transition-colors"
             >
               Resume
