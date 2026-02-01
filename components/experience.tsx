@@ -7,7 +7,7 @@ import { cn } from "@/lib/utils"
 
 const experiences = [
   {
-    title: "Software Engineer I",
+    title: "Software Engineer II",
     company: "Bazaar Technologies",
     companyUrl: "https://www.bazaartech.com/",
     period: "May 2025 — Present",
