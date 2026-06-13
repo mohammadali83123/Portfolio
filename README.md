@@ -1,100 +1,89 @@
-# Mohammad Ali Portfolio
+# Mohammad Ali — Portfolio
 
-A modern, high-performance personal portfolio website designed to showcase skills, experience, and projects. Built with [Next.js](https://nextjs.org/), [TypeScript](https://www.typescriptlang.org/), and [Tailwind CSS](https://tailwindcss.com/).
+The personal portfolio of **Mohammad Ali**, Software Engineer II (Backend & AI Systems). A single-page, design-forward site built with [Next.js](https://nextjs.org/), [TypeScript](https://www.typescriptlang.org/), and [Tailwind CSS](https://tailwindcss.com/) — featuring a real-time **3D companion mascot**, dual day/night themes, and a motion system tuned to feel alive without getting in the way.
 
-## 🚀 Overview
+🔗 **Live:** [mohammadalis.vercel.app](https://mohammadalis.vercel.app)
 
-This project is a fully responsive web application that serves as a digital resume and portfolio. It leverages the latest web technologies to provide a fast, accessible, and visually appealing user experience.
+## 🎨 Design — "Systems Editorial"
 
-### Key Features
+A deliberate, single-identity aesthetic that reads like an engineering control room art-directed by a print magazine:
 
-*   **⚡ Modern Stack**: Built on Next.js 16 (App Router) for server-side rendering and static site generation.
-*   **🎨 Responsive Design**: Styled with Tailwind CSS v4 for a mobile-first, adaptive layout.
-*   **🧩 UI Components**: Utilizes [Radix UI](https://www.radix-ui.com/) primitives (via Shadcn UI) for accessible and robust interactive components.
-*   **🌙 Dark Mode**: Integrated theme support with `next-themes`.
-*   **✅ Type Safety**: Comprehensive TypeScript support for reliable code.
-*   **📊 Data Visualization**: Includes charts and graphs using `recharts`.
-*   **📝 Form Handling**: Robust form validation using `react-hook-form` and `zod`.
+- **Type** — Fraunces (expressive display serif) · Archivo (body) · JetBrains Mono (the "metadata" layer: labels, timestamps, tags)
+- **Two faces, one brand** — **Night**: phosphor chartreuse on warm graphite. **Day**: deep olive ink on warm paper. Same hue family, contrast-tuned for readability in both.
+- **Texture** — film-grain overlay, dotted engineering grid, hairline rules, zero border-radius.
+
+## ✨ Key Features
+
+- **🤖 3D Mascot Drone** — a [React Three Fiber](https://r3f.docs.pmnd.rs/) robot that flies around the viewport as a real-time cursor companion: banks into turns, tracks your pointer, blinks, falls asleep when idle, and startles when you rush at it. Desktop + non-reduced-motion only.
+- **🌌 Whole-page depth** — a WebGL particle field with cursor parallax, perspective tilt-on-hover cards, and a hero masthead that drifts at multiple depths.
+- **🌗 Day / Night themes** — instant theme switching via `next-themes`, with every element (including the 3D mascot) re-skinning to the active palette.
+- **🎬 Motion system** — boot-sequence intro, scroll-reveal headings and project images, a live status bar, and a section-progress rail.
+- **♿ Accessible & resilient** — honors `prefers-reduced-motion`, gracefully degrades on touch devices, and uses a fail-safe scroll-reveal so content can never strand hidden.
+- **⚡ Performance-minded** — capped device-pixel-ratio, a render loop that pauses on a hidden tab, and lazy-loaded 3D so the core content paints fast.
 
 ## 🛠️ Tech Stack
 
-*   **Framework**: [Next.js 16](https://nextjs.org/)
-*   **Language**: [TypeScript](https://www.typescriptlang.org/)
-*   **Styling**: [Tailwind CSS 4](https://tailwindcss.com/), `tailwindcss-animate`
-*   **UI Library**: [Radix UI](https://www.radix-ui.com/)
-*   **Icons**: [Lucide React](https://lucide.dev/)
-*   **Forms**: React Hook Form + Zod
-*   **Analytics**: Vercel Analytics
+| Area | Tools |
+| --- | --- |
+| **Framework** | [Next.js 16](https://nextjs.org/) (App Router), [React 19](https://react.dev/) |
+| **Language** | [TypeScript](https://www.typescriptlang.org/) |
+| **Styling** | [Tailwind CSS 4](https://tailwindcss.com/), `tw-animate-css` |
+| **3D / Motion** | [three.js](https://threejs.org/), [@react-three/fiber](https://r3f.docs.pmnd.rs/), [@react-three/drei](https://github.com/pmndrs/drei) |
+| **Theming** | [next-themes](https://github.com/pacocoursey/next-themes) |
+| **UI primitives** | [Radix UI](https://www.radix-ui.com/) (via shadcn/ui) |
+| **Icons** | [Lucide React](https://lucide.dev/) + brand marks via [Simple Icons](https://simpleicons.org/) CDN |
+| **Analytics** | Vercel Analytics + Speed Insights |
+| **Deployment** | [Vercel](https://vercel.com/) |
 
 ## ⚙️ Getting Started
 
-Follow these instructions to get a copy of the project up and running on your local machine.
-
 ### Prerequisites
 
-Ensure you have the following installed:
-
-*   **Node.js**: (Version 18 or higher recommended)
-*   **pnpm**: This project uses pnpm as the package manager.
-    ```bash
-    npm install -g pnpm
-    ```
+- **Node.js** 18.18+ (Node 20+ recommended)
+- **npm** (the repo ships a `package-lock.json`; pnpm also works)
 
 ### Installation
 
-1.  **Clone the repository:**
-    ```bash
-    git clone https://github.com/mohammadali83123/Portfolio.git
-    cd Portfolio
-    ```
-
-2.  **Install dependencies:**
-    ```bash
-    pnpm install
-    ```
-
-### 🏃‍♂️ Running Locally
-
-Start the development server:
-
 ```bash
-pnpm run dev
+git clone https://github.com/mohammadali83123/Portfolio.git
+cd Portfolio
+npm install
 ```
 
-The application will be available at [http://localhost:3001](http://localhost:3001).
-
-> **Note:** The server is configured to run on port **3001** by default.
-
-### 🏗️ Building for Production
-
-To create an optimized production build:
+### Running locally
 
 ```bash
-pnpm run build
+npm run dev
 ```
 
-After building, you can start the production server:
+The app runs at **[http://localhost:3001](http://localhost:3001)** (port is fixed to `3001` in the dev/start scripts).
+
+### Production build
 
 ```bash
-pnpm run start
+npm run build
+npm run start
 ```
 
 ## 📂 Project Structure
 
 ```bash
-├── app/                # Next.js App Router pages and layouts
-├── components/         # Reusable UI components (buttons, dialogs, etc.)
-├── hooks/              # Custom React hooks
-├── lib/                # Utility functions and libraries
-├── public/             # Static assets (images, fonts)
-├── styles/             # Global styles
-├── ...configuration files
+├── app/                # App Router entry (layout, page, global styles, metadata)
+├── components/
+│   ├── robot3d.tsx     # 3D mascot drone (React Three Fiber scene)
+│   ├── mascot.tsx      # Lazy, capability-gated loader for the 3D scene
+│   ├── tilt.tsx        # Perspective tilt-on-hover wrapper
+│   ├── hero.tsx        # Masthead + production-metrics readout + parallax
+│   ├── experience / projects / skills / education / contact
+│   ├── boot-screen · status-bar · section-rail · section-heading
+│   └── ui/             # Radix-based shadcn/ui primitives
+├── hooks/
+│   └── use-reveal.ts   # Fail-safe scroll reveal (IO + rAF + timeout fallback)
+├── lib/                # Utilities
+├── public/             # Images, favicons, profile, project schematics
+└── ...config files
 ```
-
-## 🤝 Contributing
-
-Contributions are welcome! Please open an issue or submit a pull request for any improvements or bug fixes.
 
 ## 📄 License
 
-This project is open source and available under the [MIT License](LICENSE).
+Open source under the [MIT License](LICENSE).
