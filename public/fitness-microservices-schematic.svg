@@ -1,0 +1,68 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 400" font-family="ui-monospace, 'JetBrains Mono', monospace">
+  <rect width="640" height="400" fill="#16170f"/>
+  <g fill="none" stroke="#3a3c2e" stroke-width="1">
+    <circle cx="20" cy="20" r="0.8" fill="#3a3c2e"/>
+  </g>
+  <defs>
+    <pattern id="dots" width="28" height="28" patternUnits="userSpaceOnUse">
+      <circle cx="2" cy="2" r="1" fill="#2c2d22"/>
+    </pattern>
+  </defs>
+  <rect width="640" height="400" fill="url(#dots)"/>
+
+  <text x="32" y="44" fill="#6b6d59" font-size="11" letter-spacing="3">/// FITNESS_PLATFORM.ARCH</text>
+
+  <!-- gateway -->
+  <rect x="32" y="70" width="160" height="56" fill="#1d1e15" stroke="#3a3c2e"/>
+  <text x="48" y="94" fill="#d6ff4b" font-size="12">API GATEWAY</text>
+  <text x="48" y="112" fill="#6b6d59" font-size="10">spring-cloud-gateway</text>
+
+  <!-- services -->
+  <rect x="256" y="46" width="160" height="56" fill="#1d1e15" stroke="#3a3c2e"/>
+  <text x="272" y="70" fill="#eceadd" font-size="12">USER SVC</text>
+  <text x="272" y="88" fill="#6b6d59" font-size="10">spring-boot :8081</text>
+
+  <rect x="256" y="122" width="160" height="56" fill="#1d1e15" stroke="#3a3c2e"/>
+  <text x="272" y="146" fill="#eceadd" font-size="12">ACTIVITY SVC</text>
+  <text x="272" y="164" fill="#6b6d59" font-size="10">spring-boot :8082</text>
+
+  <rect x="256" y="198" width="160" height="56" fill="#1d1e15" stroke="#3a3c2e"/>
+  <text x="272" y="222" fill="#eceadd" font-size="12">AI RECOMMEND SVC</text>
+  <text x="272" y="240" fill="#6b6d59" font-size="10">spring-boot :8083</text>
+
+  <!-- event bus -->
+  <rect x="472" y="122" width="136" height="56" fill="#1d1e15" stroke="#d6ff4b"/>
+  <text x="488" y="146" fill="#d6ff4b" font-size="12">EVENT BUS</text>
+  <text x="488" y="164" fill="#6b6d59" font-size="10">rabbitmq</text>
+
+  <!-- registry -->
+  <rect x="472" y="262" width="136" height="56" fill="#1d1e15" stroke="#3a3c2e"/>
+  <text x="488" y="286" fill="#eceadd" font-size="12">EUREKA</text>
+  <text x="488" y="304" fill="#6b6d59" font-size="10">service registry</text>
+
+  <!-- config -->
+  <rect x="32" y="262" width="160" height="56" fill="#1d1e15" stroke="#3a3c2e"/>
+  <text x="48" y="286" fill="#eceadd" font-size="12">CONFIG SERVER</text>
+  <text x="48" y="304" fill="#6b6d59" font-size="10">centralized config</text>
+
+  <!-- connections -->
+  <g stroke="#52543f" stroke-width="1" stroke-dasharray="4 4" fill="none">
+    <path d="M192 98 L256 74"/>
+    <path d="M192 98 L256 150"/>
+    <path d="M192 98 L256 226"/>
+    <path d="M416 74 L472 142"/>
+    <path d="M416 150 L472 150"/>
+    <path d="M416 226 L472 158"/>
+    <path d="M336 254 L336 290 L472 290"/>
+    <path d="M192 290 L256 254"/>
+  </g>
+
+  <g fill="#d6ff4b">
+    <circle cx="256" cy="74" r="2.5"/>
+    <circle cx="256" cy="150" r="2.5"/>
+    <circle cx="256" cy="226" r="2.5"/>
+    <circle cx="472" cy="150" r="2.5"/>
+  </g>
+
+  <text x="32" y="372" fill="#6b6d59" font-size="10" letter-spacing="2">EVENT-DRIVEN // FAULT-TOLERANT // HORIZONTALLY SCALABLE</text>
+</svg>

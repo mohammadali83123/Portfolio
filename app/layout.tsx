@@ -1,39 +1,49 @@
 import type React from "react"
 import type { Metadata, Viewport } from "next"
-import { Inter, Geist_Mono } from "next/font/google"
+import { Fraunces, Archivo, JetBrains_Mono } from "next/font/google"
 import { Analytics } from "@vercel/analytics/next"
 import { SpeedInsights } from "@vercel/speed-insights/next"
 import { ThemeProvider } from "@/components/theme-provider"
 import "./globals.css"
 
-const inter = Inter({ subsets: ["latin"] })
-const _geistMono = Geist_Mono({ subsets: ["latin"] })
+const fraunces = Fraunces({
+  subsets: ["latin"],
+  variable: "--font-fraunces",
+  style: ["normal", "italic"],
+})
+const archivo = Archivo({ subsets: ["latin"], variable: "--font-archivo" })
+const jetbrainsMono = JetBrains_Mono({ subsets: ["latin"], variable: "--font-jbmono" })
 
 export const metadata: Metadata = {
-  title: "Mohammad Ali | Software Engineer - AI & Backend Systems",
+  title: "Mohammad Ali | Software Engineer II — Backend & AI Systems",
   description:
-    "Software Engineer specializing in AI/ML, Backend Development, and Cloud Architecture. Expert in Python, FastAPI, LLMs, RAG pipelines, PostgreSQL, AWS, and microservices. Building scalable production systems with 70%+ automation rates.",
+    "Software Engineer II at Bazaar Technologies, building distributed backend systems and production AI agents. Java, Python, Go, FastAPI, OpenAI Agents SDK, LangGraph, RAG, Kubernetes, AWS/Azure. 94% autonomous query resolution, 30,000+ users served.",
   keywords: [
     "Software Engineer",
     "AI Engineer",
-    "Machine Learning Engineer",
     "Backend Developer",
-    "Python Developer",
+    "Agentic AI",
+    "Multi-Agent Systems",
+    "Java",
+    "Spring Boot",
+    "Python",
+    "Go",
     "FastAPI",
+    "OpenAI Agents SDK",
+    "LangGraph",
+    "LangChain",
     "LLM",
     "RAG Pipeline",
-    "Conversational AI",
-    "NLP",
+    "Semantic Caching",
     "PostgreSQL",
+    "pgvector",
     "AWS",
     "Azure",
+    "Kubernetes",
     "Microservices",
-    "Docker",
-    "CI/CD",
-    "Full Stack Developer",
-    "React",
+    "Distributed Systems",
+    "Event-Driven Architecture",
     "Next.js",
-    "Node.js",
   ],
   authors: [{ name: "Mohammad Ali", url: "https://mohammadalis.vercel.app" }],
   creator: "Mohammad Ali",
@@ -41,9 +51,9 @@ export const metadata: Metadata = {
     type: "website",
     locale: "en_US",
     url: "https://mohammadalis.vercel.app",
-    title: "Mohammad Ali | Software Engineer - AI & Backend Systems",
+    title: "Mohammad Ali | Software Engineer II — Backend & AI Systems",
     description:
-      "Software Engineer with expertise in AI/ML, Backend Development, and Cloud Architecture. Building scalable production systems.",
+      "Building distributed backend systems and production AI agents. 94% autonomous query resolution, 30,000+ users served.",
     siteName: "Mohammad Ali",
     images: [
       {
@@ -56,8 +66,8 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Mohammad Ali | Software Engineer - AI & Backend Systems",
-    description: "Software Engineer specializing in AI/ML, Backend Development, and Cloud Architecture.",
+    title: "Mohammad Ali | Software Engineer II — Backend & AI Systems",
+    description: "Building distributed backend systems and production AI agents.",
     images: ["https://mohammadalis.vercel.app/profile/profile.png"],
   },
   robots: {
@@ -76,7 +86,7 @@ export const metadata: Metadata = {
     icon: [
       { url: "/my-favicon/favicon-32x32.png", sizes: "32x32", type: "image/png" },
       { url: "/my-favicon/favicon-16x16.png", sizes: "16x16", type: "image/png" },
-      { url: "/my-favicon/favicon.ico", sizes: "any" }
+      { url: "/my-favicon/favicon.ico", sizes: "any" },
     ],
     shortcut: "/my-favicon/favicon.ico",
     apple: "/my-favicon/apple-touch-icon.png",
@@ -85,8 +95,8 @@ export const metadata: Metadata = {
 
 export const viewport: Viewport = {
   themeColor: [
-    { media: "(prefers-color-scheme: light)", color: "#f8fafc" },
-    { media: "(prefers-color-scheme: dark)", color: "#0f172a" },
+    { media: "(prefers-color-scheme: light)", color: "#f2f0e4" },
+    { media: "(prefers-color-scheme: dark)", color: "#15160f" },
   ],
   width: "device-width",
   initialScale: 1,
@@ -99,8 +109,10 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" suppressHydrationWarning>
-      <body className={`font-sans antialiased ${inter.className}`}>
-        <ThemeProvider attribute="class" defaultTheme="dark" enableSystem disableTransitionOnChange>
+      <body
+        className={`${fraunces.variable} ${archivo.variable} ${jetbrainsMono.variable} font-sans antialiased`}
+      >
+        <ThemeProvider attribute="class" defaultTheme="dark" disableTransitionOnChange>
           {children}
         </ThemeProvider>
         <Analytics />

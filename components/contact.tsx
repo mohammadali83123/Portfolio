@@ -1,97 +1,98 @@
 "use client"
 
 import Link from "next/link"
-import { Mail, MapPin, Github, Linkedin, Calendar } from "lucide-react"
+import Image from "next/image"
+import { Calendar, Github, Linkedin, Mail } from "lucide-react"
 import { useInView } from "@/hooks/use-in-view"
+import { SectionHeading } from "@/components/section-heading"
+import { Tilt } from "@/components/tilt"
 import { cn } from "@/lib/utils"
 
 export function Contact() {
   const { ref, isInView } = useInView({ threshold: 0.1 })
 
   return (
-    <section id="contact" className="py-24 pb-32" ref={ref}>
-      <h2 className="text-2xl font-bold text-foreground mb-12 flex items-center gap-4">
-        <span className="text-primary font-mono text-lg">05.</span>
-        Get In Touch
-        <span className="h-px bg-border flex-1 ml-4" />
-      </h2>
+    <section id="contact" className="py-24 lg:py-32" ref={ref}>
+      <SectionHeading index="05" title="Contact" />
 
       <div
-        className={cn("max-w-3xl mx-auto opacity-0", isInView && "animate-fade-in-up")}
+        className={cn("opacity-0", isInView && "animate-fade-in-up")}
         style={{ animationFillMode: "forwards" }}
       >
-        <div className="text-center mb-12">
-          <p className="text-muted-foreground text-lg leading-relaxed mb-8">
-            I&apos;m actively seeking <span className="text-primary font-medium">Software Engineering roles</span>{" "}
-            specializing in{" "}
-            <span className="text-primary font-medium">
-              Backend Development, AI/ML Engineering, and Cloud Architecture
-            </span>
-            . Open to opportunities in EU, US, and remote positions. Whether you have a role, project, or just want to
-            connect—my inbox is always open.
-          </p>
-        </div>
+        <p className="font-mono text-xs tracking-widest text-muted-foreground uppercase flex items-center gap-3 mb-8">
+          <span className="inline-block w-2 h-2 bg-primary animate-blink" />
+          accepting: backend / ai engineering / cloud architecture — eu, us, remote
+        </p>
 
-        {/* CTA Buttons - Responsive Grid */}
-        <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-12">
-          <Link
-            href="mailto:mohammadali83123@gmail.com"
-            className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-8 py-4 bg-primary text-primary-foreground font-medium rounded hover:bg-primary/90 transition-all hover:scale-105 text-lg"
-          >
-            <Mail className="w-5 h-5" />
-            Send Email
-          </Link>
-          <Link
-            href="https://calendly.com/mohammadali83123"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-8 py-4 border border-primary text-primary font-medium rounded hover:bg-primary/10 transition-all hover:scale-105 text-lg"
-          >
-            <Calendar className="w-5 h-5" />
-            Schedule Call
-          </Link>
-        </div>
+        <div className="grid lg:grid-cols-[1fr_280px] gap-12 items-start">
+          <div>
+            <h3 className="font-display text-[clamp(2rem,6vw,4.5rem)] font-medium leading-[1.05] tracking-tight max-w-4xl">
+              Let&apos;s build something <span className="text-primary italic">reliable</span> together.
+            </h3>
 
-        {/* Contact Info Grid - Responsive */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 max-w-md mx-auto mb-8">
-          <div className="flex items-center justify-center sm:justify-start gap-3 p-4 bg-card rounded-lg border border-border hover:border-primary/30 transition-colors">
-            <Mail className="w-4 h-4 text-primary flex-shrink-0" />
-            <span className="text-sm text-muted-foreground truncate">mohammadali83123@gmail.com</span>
+            <Link
+              href="mailto:mohammadali83123@gmail.com"
+              className="group inline-block mt-10 font-mono text-base sm:text-2xl text-foreground hover:text-primary transition-colors break-all"
+            >
+              <span className="inline-flex items-center gap-3">
+                <Mail className="w-5 h-5 sm:w-6 sm:h-6 text-primary shrink-0" />
+                mohammadali83123@gmail.com
+              </span>
+              <span className="block h-px bg-border group-hover:bg-primary transition-colors mt-2" />
+            </Link>
           </div>
-          <div className="flex items-center justify-center sm:justify-start gap-3 p-4 bg-card rounded-lg border border-border hover:border-primary/30 transition-colors">
-            <MapPin className="w-4 h-4 text-primary flex-shrink-0" />
-            <span className="text-sm text-muted-foreground">Karachi, Pakistan (Open to Relocation)</span>
+
+          {/* Identity frame — corner brackets, reference: shafiab.com */}
+          <div className="hidden lg:block">
+            <Tilt max={8} className="relative p-3">
+              <span className="absolute top-0 left-0 w-5 h-5 border-t border-l border-primary" />
+              <span className="absolute top-0 right-0 w-5 h-5 border-t border-r border-primary" />
+              <span className="absolute bottom-0 left-0 w-5 h-5 border-b border-l border-primary" />
+              <span className="absolute bottom-0 right-0 w-5 h-5 border-b border-r border-primary" />
+              <Image
+                src="/profile/profile.png"
+                alt="Mohammad Ali"
+                width={280}
+                height={280}
+                className="w-full aspect-square object-cover grayscale contrast-110 hover:grayscale-0 transition-all duration-700"
+              />
+            </Tilt>
+            <div className="flex items-center justify-between mt-3 px-3 font-mono text-[10px] uppercase tracking-[0.2em] text-muted-foreground">
+              <span>that&apos;s me — say hi</span>
+              <span className="flex items-center gap-1.5 text-primary">
+                <span className="inline-block w-1.5 h-1.5 bg-primary animate-blink" />
+                online
+              </span>
+            </div>
           </div>
         </div>
 
-        {/* Social Links */}
-        <div className="flex items-center justify-center gap-6">
-          <Link
-            href="https://github.com/mohammadali83123"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="p-3 text-muted-foreground hover:text-primary transition-all hover:scale-110 bg-card rounded-full border border-border hover:border-primary/30"
-            aria-label="GitHub"
-          >
-            <Github className="w-6 h-6" />
-          </Link>
-          <Link
-            href="https://linkedin.com/in/mohammadali83123"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="p-3 text-muted-foreground hover:text-primary transition-all hover:scale-110 bg-card rounded-full border border-border hover:border-primary/30"
-            aria-label="LinkedIn"
-          >
-            <Linkedin className="w-6 h-6" />
-          </Link>
-          <Link
-            href="mailto:mohammadali83123@gmail.com"
-            className="p-3 text-muted-foreground hover:text-primary transition-all hover:scale-110 bg-card rounded-full border border-border hover:border-primary/30"
-            aria-label="Email"
-          >
-            <Mail className="w-6 h-6" />
-          </Link>
+        <div className="grid sm:grid-cols-3 gap-px bg-border border border-border mt-14">
+          {[
+            { label: "schedule_call", value: "Calendly ↗", href: "https://calendly.com/mohammadali83123", icon: Calendar },
+            { label: "github", value: "mohammadali83123 ↗", href: "https://github.com/mohammadali83123", icon: Github },
+            { label: "linkedin", value: "mohammadali83123 ↗", href: "https://linkedin.com/in/mohammadali83123", icon: Linkedin },
+          ].map((item) => (
+            <Tilt key={item.label} max={6}>
+              <Link
+                href={item.href}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="block h-full bg-background p-6 hover:bg-card transition-colors group"
+              >
+                <p className="font-mono text-[10px] uppercase tracking-[0.25em] text-muted-foreground flex items-center gap-2">
+                  <item.icon className="w-3.5 h-3.5 text-primary" />
+                  {item.label}
+                </p>
+                <p className="font-display text-lg mt-2 group-hover:text-primary transition-colors">{item.value}</p>
+              </Link>
+            </Tilt>
+          ))}
         </div>
+
+        <p className="font-mono text-xs uppercase tracking-widest text-muted-foreground mt-10">
+          Karachi, Pakistan — open to relocation
+        </p>
       </div>
     </section>
   )
