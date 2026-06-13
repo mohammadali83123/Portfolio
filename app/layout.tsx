@@ -15,10 +15,19 @@ const archivo = Archivo({ subsets: ["latin"], variable: "--font-archivo" })
 const jetbrainsMono = JetBrains_Mono({ subsets: ["latin"], variable: "--font-jbmono" })
 
 export const metadata: Metadata = {
-  title: "Mohammad Ali | Software Engineer II — Backend & AI Systems",
+  metadataBase: new URL("https://mohammadalis.vercel.app"),
+  title: "Mohammad Ali — Software Engineer Portfolio | Backend & AI Systems",
   description:
-    "Software Engineer II at Bazaar Technologies, building distributed backend systems and production AI agents. Java, Python, Go, FastAPI, OpenAI Agents SDK, LangGraph, RAG, Kubernetes, AWS/Azure. 94% autonomous query resolution, 30,000+ users served.",
+    "Official portfolio of Mohammad Ali, Software Engineer II at Bazaar Technologies — building distributed backend systems and production AI agents. Java, Python, Go, FastAPI, OpenAI Agents SDK, LangGraph, RAG, Kubernetes, AWS/Azure. 94% autonomous query resolution, 30,000+ users served.",
+  alternates: {
+    canonical: "https://mohammadalis.vercel.app",
+  },
   keywords: [
+    "Mohammad Ali",
+    "Mohammad Ali Portfolio",
+    "Mohammad Ali Software Engineer",
+    "Mohammad Ali Bazaar Technologies",
+    "Mohammad Ali Karachi",
     "Software Engineer",
     "AI Engineer",
     "Backend Developer",
@@ -102,6 +111,55 @@ export const viewport: Viewport = {
   initialScale: 1,
 }
 
+// Structured data: declares this as the official site of a Person named
+// Mohammad Ali, disambiguating from others and enabling richer Google results.
+const personJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "Person",
+  name: "Mohammad Ali",
+  url: "https://mohammadalis.vercel.app",
+  image: "https://mohammadalis.vercel.app/profile/profile.png",
+  jobTitle: "Software Engineer II — Backend & AI Systems",
+  worksFor: {
+    "@type": "Organization",
+    name: "Bazaar Technologies",
+    url: "https://www.bazaartech.com/",
+  },
+  alumniOf: {
+    "@type": "CollegeOrUniversity",
+    name: "FAST National University of Computer and Emerging Sciences (NUCES), Karachi",
+  },
+  address: {
+    "@type": "PostalAddress",
+    addressLocality: "Karachi",
+    addressCountry: "PK",
+  },
+  email: "mailto:mohammadali83123@gmail.com",
+  knowsAbout: [
+    "Backend Engineering",
+    "Distributed Systems",
+    "Agentic AI",
+    "Large Language Models",
+    "Retrieval-Augmented Generation",
+    "Java",
+    "Python",
+    "Go",
+    "Kubernetes",
+  ],
+  sameAs: [
+    "https://github.com/mohammadali83123",
+    "https://linkedin.com/in/mohammadali83123",
+  ],
+}
+
+const siteJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  name: "Mohammad Ali — Portfolio",
+  url: "https://mohammadalis.vercel.app",
+  author: { "@type": "Person", name: "Mohammad Ali" },
+}
+
 export default function RootLayout({
   children,
 }: Readonly<{
@@ -112,6 +170,11 @@ export default function RootLayout({
       <body
         className={`${fraunces.variable} ${archivo.variable} ${jetbrainsMono.variable} font-sans antialiased`}
       >
+        <script
+          type="application/ld+json"
+          // eslint-disable-next-line react/no-danger
+          dangerouslySetInnerHTML={{ __html: JSON.stringify([personJsonLd, siteJsonLd]) }}
+        />
         <ThemeProvider attribute="class" defaultTheme="dark" disableTransitionOnChange>
           {children}
         </ThemeProvider>
