@@ -19,9 +19,29 @@ const socials = [
 
 export function Hero() {
   const [isVisible, setIsVisible] = useState(false)
+  const [visitorName, setVisitorName] = useState("")
   const sectionRef = useRef<HTMLElement>(null)
   const mastRef = useRef<HTMLHeadingElement>(null)
   const metricsRef = useRef<HTMLDivElement>(null)
+
+  // Greet a visitor who introduced themselves at the welcome gate
+  useEffect(() => {
+    try {
+      const raw = localStorage.getItem("ma_visitor")
+      if (raw) {
+        const n = (JSON.parse(raw)?.name || "").trim()
+        if (n) setVisitorName(n.split(/\s+/)[0])
+      }
+    } catch {
+      /* ignore */
+    }
+    const onId = (e: Event) => {
+      const n = ((e as CustomEvent).detail?.name || "").trim()
+      if (n) setVisitorName(n.split(/\s+/)[0])
+    }
+    window.addEventListener("visitor-identified", onId as EventListener)
+    return () => window.removeEventListener("visitor-identified", onId as EventListener)
+  }, [])
 
   // Cursor parallax — masthead, metrics, and dot grid drift at different depths.
   // Fine-pointer only, so touch devices never get stuck mid-transform.
@@ -82,7 +102,14 @@ export function Hero() {
         <div {...reveal(100)}>
           <p className="font-mono text-xs tracking-widest text-muted-foreground uppercase flex items-center gap-3">
             <span className="inline-block w-2 h-2 bg-primary animate-blink" />
-            sys.status: open_to_opportunities — karachi, pk / remote
+            {visitorName ? (
+              <span>
+                <span className="text-primary">welcome, {visitorName}.</span> sys.status:
+                open_to_opportunities — karachi, pk / remote
+              </span>
+            ) : (
+              <span>sys.status: open_to_opportunities — karachi, pk / remote</span>
+            )}
           </p>
         </div>
 

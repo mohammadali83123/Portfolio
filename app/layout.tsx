@@ -18,7 +18,7 @@ export const metadata: Metadata = {
   metadataBase: new URL("https://mohammadalis.vercel.app"),
   title: "Mohammad Ali — Software Engineer Portfolio | Backend & AI Systems",
   description:
-    "Official portfolio of Mohammad Ali, Software Engineer II at Bazaar Technologies — building distributed backend systems and production AI agents. Java, Python, Go, FastAPI, OpenAI Agents SDK, LangGraph, RAG, Kubernetes, AWS/Azure. 94% autonomous query resolution, 30,000+ users served.",
+    "Official portfolio of Mohammad Ali (also spelled Muhammad Ali), Software Engineer II at Bazaar Technologies — building distributed backend systems and production AI agents. Java, Python, Go, FastAPI, OpenAI Agents SDK, LangGraph, RAG, Kubernetes, AWS/Azure. 94% autonomous query resolution, 30,000+ users served.",
   alternates: {
     canonical: "https://mohammadalis.vercel.app",
   },
@@ -28,6 +28,10 @@ export const metadata: Metadata = {
     "Mohammad Ali Software Engineer",
     "Mohammad Ali Bazaar Technologies",
     "Mohammad Ali Karachi",
+    "Muhammad Ali",
+    "Muhammad Ali Portfolio",
+    "Muhammad Ali Software Engineer",
+    "Muhammad Ali Developer",
     "Software Engineer",
     "AI Engineer",
     "Backend Developer",
@@ -117,6 +121,7 @@ const personJsonLd = {
   "@context": "https://schema.org",
   "@type": "Person",
   name: "Mohammad Ali",
+  alternateName: ["Muhammad Ali", "Mohammad Ali Software Engineer"],
   url: "https://mohammadalis.vercel.app",
   image: "https://mohammadalis.vercel.app/profile/profile.png",
   jobTitle: "Software Engineer II — Backend & AI Systems",

@@ -1,4 +1,5 @@
-import { BootScreen } from "@/components/boot-screen"
+import { NoContextMenu } from "@/components/no-context-menu"
+import { WelcomeGate } from "@/components/welcome-gate"
 import { Header } from "@/components/header"
 import { Hero } from "@/components/hero"
 import { Ticker } from "@/components/ticker"
@@ -16,7 +17,8 @@ import { Footer } from "@/components/footer"
 export default function Home() {
   return (
     <div className="min-h-screen bg-background pb-9">
-      <BootScreen />
+      <NoContextMenu />
+      <WelcomeGate />
       <Header />
       <Hero />
       <Ticker />
