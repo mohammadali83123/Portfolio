@@ -78,9 +78,9 @@ export function WelcomeGate() {
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [active, name, email])
 
-  const finish = (recordVisitor: boolean) => {
+  const finish = (record: boolean) => {
     sessionStorage.setItem("ma_welcome_seen", "1")
-    if (recordVisitor) {
+    if (record) {
       const trimmed = name.trim()
       const mail = email.trim()
       if (trimmed || mail) {
@@ -125,7 +125,7 @@ export function WelcomeGate() {
 
       
       <span className="absolute top-7 right-6 z-10 font-mono text-xs uppercase tracking-[0.25em] text-foreground">
-        Moahammad Ali<span className="text-primary"></span>
+        Mohammad Ali<span className="text-primary"></span>
       </span>
 
       {/* card */}
